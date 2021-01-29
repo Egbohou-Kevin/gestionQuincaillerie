@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9f8bd92-f0e8-410d-ae76-d81502ff844e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     *
+FROM
+     `article` article]]>
+	</queryString>
+	<field name="idart" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomart" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="comart" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stock" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateart" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prixart" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idcat" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idfrs" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="41" width="100" height="20" uuid="6d3340c5-cc55-4435-a375-e70221cdda24"/>
+				<text><![CDATA[nom]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="41" width="100" height="20" uuid="d647edff-afac-468f-b2e8-f14bf1ba2d3d"/>
+				<text><![CDATA[commentaire]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="41" width="100" height="20" uuid="37a5766f-f27a-451b-bc56-5edb93dfe99c"/>
+				<text><![CDATA[prix]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50">
+			<textField>
+				<reportElement x="23" y="12" width="100" height="20" uuid="40518117-cb66-4f91-bf6c-a2543ba4ec4b"/>
+				<textFieldExpression><![CDATA[$F{nomart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="12" width="100" height="20" uuid="c36d0406-e802-4768-a616-8250ed5dbce6"/>
+				<textFieldExpression><![CDATA[$F{comart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="12" width="100" height="20" uuid="4e4bdbeb-791a-4d31-a92a-b8b06afdbac2"/>
+				<textFieldExpression><![CDATA[$F{prixart}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
